@@ -9,8 +9,17 @@
 	<body>
 		<div ng-controller="PlayerController">
 		  Playing audio: <b></b>
-		  <button ng-click="play()" class="button" ng-show="!playing">Play</button>
-		  <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+			<button ng-click="play()" class="button" ng-show="!playing">Play</button>
+			<button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+
+			{{ programs }}
+		</div>
+
+		<div ng-controller="DemoController">
+			<h4>How many fingers?</h4>
+			<button class="button" ng-click="add(1)" >Add Fingers</button>
+			<button class="button" ng-click="sub(1)">Subtract FIngers</button>
+			<h1> {{ counter }} </h1>
 		</div>
 	</body>
 </html>
